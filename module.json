@@ -1,0 +1,82 @@
+{
+  "id": "5e-dnd",
+  "title": "5e dnd",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "scripts": ["scripts/main.js"],
+  "flags": {
+    "canUpload": true
+  },
+  "packs": [
+    {
+      "name": "Sousclasse",
+      "label": "Sous classe",
+      "path": "packs/Sousclasse",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "race",
+      "label": "Race",
+      "path": "packs/race",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "classe",
+      "label": "Classe",
+      "path": "packs/classe",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "dons",
+      "label": "Dons",
+      "path": "packs/dons",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "sorts",
+      "label": "5eSorts",
+      "path": "packs/sorts",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    },
+    {
+      "name": "Historique",
+      "label": "Historique",
+      "path": "packs/Historique",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    }
+  ],
+  "description": ""
+}

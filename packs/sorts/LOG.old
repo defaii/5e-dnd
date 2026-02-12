@@ -1,0 +1,5 @@
+2026/02/12-14:35:52.857 ac4 Delete type=3 #1
+2026/02/12-14:37:02.038 4008 Level-0 table #5: started
+2026/02/12-14:37:02.043 4008 Level-0 table #5: 27251 bytes OK
+2026/02/12-14:37:02.045 4008 Delete type=0 #3
+2026/02/12-14:37:02.049 4008 Manual compaction at level-0 from '!folders!RHHmiGAjwUu5zahZ' @ 72057594037927935 : 1 .. '!items.effects!kr8UdfmtgzOBGkXc.Djf6u3N0dfDr0knq' @ 0 : 0; will stop at (end)

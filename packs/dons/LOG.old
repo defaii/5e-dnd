@@ -1,0 +1,8 @@
+2026/02/12-14:35:52.837 ac4 Recovering log #4
+2026/02/12-14:35:52.843 ac4 Delete type=0 #4
+2026/02/12-14:35:52.843 ac4 Delete type=3 #2
+2026/02/12-14:37:02.045 4008 Level-0 table #9: started
+2026/02/12-14:37:02.045 4008 Level-0 table #9: 0 bytes OK
+2026/02/12-14:37:02.047 4008 Delete type=0 #7
+2026/02/12-14:37:02.049 4008 Manual compaction at level-0 from '!items!U7FZcyCYjH7lXYt9' @ 72057594037927935 : 1 .. '!items!mKMr1AfoQUJZfqJd' @ 0 : 0; will stop at (end)
+2026/02/12-14:37:02.049 4008 Manual compaction at level-1 from '!items!U7FZcyCYjH7lXYt9' @ 72057594037927935 : 1 .. '!items!mKMr1AfoQUJZfqJd' @ 0 : 0; will stop at (end)
