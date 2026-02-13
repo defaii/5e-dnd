@@ -1,7 +1,7 @@
 {
   "id": "5e-dnd",
   "title": "5e dnd",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -111,5 +111,19 @@
       }
     ]
   },
+  "authors": [
+    {
+      "name": "Defaii",
+      "discord": "@defaii",
+      "flags": {}
+    },
+    {
+      "name": "Frozr Le cameleon",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/defaii/5e-dnd",
+  "manifest": "https://github.com/defaii/5e-dnd/releases/latest/download/module.json",
+  "download": "https://github.com/defaii/5e-dnd/archive/refs/heads/main.zip",
   "description": ""
 }
