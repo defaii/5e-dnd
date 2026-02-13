@@ -6,7 +6,9 @@
     "minimum": "13",
     "verified": "13"
   },
-  "scripts": ["scripts/main.js"],
+  "scripts": [
+    "scripts/main.js"
+  ],
   "flags": {
     "canUpload": true
   },
@@ -60,23 +62,54 @@
       "label": "5eSorts",
       "path": "packs/sorts",
       "type": "Item",
+      "system": "dnd5e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "dnd5e"
+      }
     },
     {
       "name": "Historique",
       "label": "Historique",
       "path": "packs/Historique",
       "type": "Item",
+      "system": "dnd5e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "dnd5e"
+      }
+    },
+    {
+      "name": "influx",
+      "label": "Influx",
+      "path": "packs/influx",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "mobs",
+      "label": "Mobs",
+      "path": "packs/mobs",
+      "type": "Actor",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
   "description": ""
 }
