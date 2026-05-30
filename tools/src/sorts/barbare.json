@@ -1,0 +1,132 @@
+{
+  "_id": "jpK9Qb3zRpLE2nkp",
+  "name": "Barbare",
+  "type": "spell",
+  "folder": null,
+  "img": "systems/dnd5e/icons/svg/tradition/conjuration.svg",
+  "system": {
+    "activities": {
+      "U31YTKCxtLvxzZe3": {
+        "_id": "U31YTKCxtLvxzZe3",
+        "type": "utility",
+        "activation": {
+          "type": "action",
+          "value": null,
+          "condition": ""
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": "",
+            "formula": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "value": "",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "ft",
+          "value": "30",
+          "long": null,
+          "override": false
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "type": "",
+            "count": "",
+            "special": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "sort": 0,
+        "name": "",
+        "img": "",
+        "appliedEffects": []
+      }
+    },
+    "description": {
+      "value": "<div class=\"prose\"></div>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AideDD",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2024"
+    },
+    "activation": {
+      "type": "action",
+      "value": null,
+      "condition": ""
+    },
+    "duration": {
+      "units": "inst",
+      "value": "",
+      "concentration": false,
+      "override": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 2,
+    "properties": [],
+    "school": "evo",
+    "level": 0,
+    "identifier": "barbare"
+  },
+  "effects": [],
+  "flags": {
+    "5e-dnd": {
+      "importedAt": 1780101851987,
+      "aideddUrl": "https://www.aidedd.org/regles/classes/barbare/",
+      "importType": "spell",
+      "sourceJsonPack": "sorts"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "coreVersion": "14.361",
+    "createdTime": 1780101851987,
+    "modifiedTime": 1780101851987,
+    "lastModifiedBy": "1hJak6Avboq6ppFC",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "dev",
+      "uuid": null,
+      "coreVersion": "14.361",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3"
+    }
+  }
+}

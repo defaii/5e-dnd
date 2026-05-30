@@ -1,0 +1,60 @@
+{
+  "_id": "rbJCtg05zEWFE8L1",
+  "name": "Enfant des rues",
+  "type": "background",
+  "folder": null,
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "advancement": [
+      {
+        "type": "Trait",
+        "title": "Proficiencies",
+        "configuration": {
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "skills:ste"
+              ]
+            }
+          ]
+        },
+        "level": 0
+      }
+    ],
+    "description": {
+      "value": "<div class=\"prose\"><p>Vous avez grandi seul dans la rue, orphelin et pauvre. Vous n'aviez personne pour vous surveiller ni pour subvenir à vos besoins, vous avez donc tout appris par vous-même. Vous vous êtes battu férocement pour obtenir votre nourriture et gardiez constamment un œil sur d'autres âmes abandonnées comme vous qui n'espéraient qu'un bon moment pour vous voler. Vous dormiez sur des toits ou dans des rues, exposé aux intempéries, et vous avez vaincu la maladie à de nombreuses reprises, sans aucune médecine ni aucun endroit pour vous récupérer. Vous avez survécu en dépit de tous les pronostiques, ce qui vous a rendu rusé, fort ou rapide, voire un peu tout cela à la fois.</p><p>Vous commencez votre carrière d'aventurier avec assez d'argent pour vivre modestement mais en sécurité pour au moins dix jours. Comment avec vous obtenu cet argent ? Qu'est-ce qui vous a permis de vous libérer de votre affreuse condition de vie et de partir pour une vie meilleure&nbsp;?</p><p><strong>Compétences maîtrisées :</strong> Discrétion, Escamotage<br><strong>Outils maîtrisés :</strong> kit de déguisement, outils de voleur<br><strong>Équipement : </strong>un petit couteau, une carte de la ville dans laquelle vous avez grandi, une souris domestiquée, un souvenir de vos parents, des vêtements communs et une bourse contenant 10 po.</p><h4>Capacité : Secrets de la ville</h4><p>Vous connaissez les ruelles secrètes et vous vous déplacez à toute vitesse dans les cités. Vous pouvez trouver des passages dans un labyrinthe urbain, passages que d'autres rateraient. Lorsque vous n'êtes pas dans une situation de combat, vous (et les compagnons que vous menez) pouvez vous déplacer en ville d'un point à un autre deux fois plus rapidement que ce que votre vitesse vous permettrait en temps normal.</p><h4>Personnalités proposées</h4><p>Les enfants des rues sont habitués à vivre dans une extrême pauvreté, pour le meilleur et pour le pire. Ils tendent à s'engager pour les personnes avec lesquelles ils ont partagé leur vie dans la rue, par un brûlant désir de trouver une vie meilleure, ou encore peut-être pour obtenir réparation de la part de tous les riches qui les ont maltraités.</p><table><tbody><tr><td style=\"text-align: center;\"><strong>d8</strong></td>\n<td><strong>Trait</strong></td>\n</tr><tr><td style=\"text-align: center;\">1</td>\n<td>Je cache des restes de nourriture et des babioles dans mes poches.</td>\n</tr><tr><td style=\"text-align: center;\">2</td>\n<td>Je pose beaucoup de questions.</td>\n</tr><tr><td style=\"text-align: center;\">3</td>\n<td>J'aime me glisser dans des espaces étroits, là où personne ne peut m'atteindre.</td>\n</tr><tr><td style=\"text-align: center;\">4</td>\n<td>Je dors le dos contre un mur ou un arbre, avec tout ce que je possède empaqueté entre mes bras.</td>\n</tr><tr><td style=\"text-align: center;\">5</td>\n<td>Je mange comme un cochon et j'ai de mauvaises manières.</td>\n</tr><tr><td style=\"text-align: center;\">6</td>\n<td>Je pense que tous ceux qui sont gentils avec moi ont en réalité une mauvaise intention.</td>\n</tr><tr><td style=\"text-align: center;\">7</td>\n<td>Je n'aime pas me laver.</td>\n</tr><tr><td style=\"text-align: center;\">8</td>\n<td>Je dis crûment ce que les autres insinuent ou cachent.</td>\n</tr></tbody></table><table><tbody><tr><td style=\"text-align: center;\"><strong>d6</strong></td>\n<td><strong>Idéal</strong></td>\n</tr><tr><td style=\"text-align: center;\">1</td>\n<td><strong>Respect</strong>. Tout le monde, pauvre ou riche, mérite d'être respecté (Bon).</td>\n</tr><tr><td style=\"text-align: center;\">2</td>\n<td><strong>Communauté</strong>. Nous devons prendre soin les uns des autres, parce que personne d'autre ne le fera (Loyal).</td>\n</tr><tr><td style=\"text-align: center;\">3</td>\n<td><strong>Changement</strong>. Les faibles doivent s'élever, et les élites et les puissants doivent être mis à terre. Le changement est dans la nature des choses (Chaotique).</td>\n</tr><tr><td style=\"text-align: center;\">4</td>\n<td><strong>Châtiment</strong> Les riches ont besoin qu'on leur montre que la vie et la mort ne font pas de différence avec ceux qui vivent dans le caniveau (Mauvais).</td>\n</tr><tr><td style=\"text-align: center;\">5</td>\n<td><strong>Peuple</strong>. J'aide ceux qui m'aident, c'est ce qui nous permet de rester en vie (Neutre).</td>\n</tr><tr><td style=\"text-align: center;\">6</td>\n<td><strong>Aspiration</strong>. Je vais leur montrer que je mérite une vie meilleure (Tout alignement).</td>\n</tr></tbody></table><table><tbody><tr><td style=\"text-align: center;\"><strong>d6</strong></td>\n<td><strong>Lien</strong></td>\n</tr><tr><td style=\"text-align: center;\">1</td>\n<td>Ma ville, ou ma cité, est ma maison, et je me battrai pour la défendre.</td>\n</tr><tr><td style=\"text-align: center;\">2</td>\n<td>Je finance un orphelinat pour éviter que d'autres subissent la même chose que moi.</td>\n</tr><tr><td style=\"text-align: center;\">3</td>\n<td>Je dois ma survie à un autre enfant des rues qui m'a appris à vivre sans abris.</td>\n</tr><tr><td style=\"text-align: center;\">4</td>\n<td>J'ai une dette que je ne pourrai jamais rembourser envers la personne qui m'a prise en pitié.</td>\n</tr><tr><td style=\"text-align: center;\">5</td>\n<td>J'ai échappé à mon sort en volant une personne très importante, et je suis recherché pour cela.</td>\n</tr><tr><td style=\"text-align: center;\">6</td>\n<td>Personne d'autre ne peut endurer les épreuves que j'ai surmontées.</td>\n</tr></tbody></table><table><tbody><tr><td style=\"text-align: center;\"><strong>d6</strong></td>\n<td><strong>Défaut</strong></td>\n</tr><tr><td style=\"text-align: center;\">1</td>\n<td>Si je suis en infériorité numérique, je fuis le combat.</td>\n</tr><tr><td style=\"text-align: center;\">2</td>\n<td>L'or me paraît être une énorme quantité d'argent, et je ferai n'importe quoi pour en obtenir toujours plus.</td>\n</tr><tr><td style=\"text-align: center;\">3</td>\n<td>Je ne ferai jamais pleinement confiance à quelqu'un d'autre qu'à moi-même.</td>\n</tr><tr><td style=\"text-align: center;\">4</td>\n<td>Je préfère tuer quelqu'un dans son sommeil plutôt que de combattre à la loyale.</td>\n</tr><tr><td style=\"text-align: center;\">5</td>\n<td>Ce n'est pas du vol si j'en ai plus besoin que quelqu'un d'autre.</td>\n</tr><tr><td style=\"text-align: center;\">6</td>\n<td>Les gens qui ne peuvent pas prendre soin d'eux-même n'ont que ce qu'ils méritent.</td>\n</tr></tbody></table><p class=\"auteur\">Traduit par boblebuter</p></div>"
+    },
+    "identifier": "enfant-des-rues",
+    "source": {
+      "book": "AideDD",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2024"
+    },
+    "startingEquipment": []
+  },
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "5.2.5",
+    "coreVersion": "13.351",
+    "createdTime": 1780098391798,
+    "modifiedTime": 1780098391798,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "aidedd-import",
+      "uuid": null,
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.5"
+    }
+  }
+}

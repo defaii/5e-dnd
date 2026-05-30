@@ -1,0 +1,20 @@
+{
+  "name": "5e-dnd-aidedd-import",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Importe le contenu AideDD vers des compendiums Foundry dnd5e",
+  "scripts": {
+    "import": "node import.mjs",
+    "import:clean": "node import.mjs --clean",
+    "import:dry": "node import.mjs --dry-run",
+    "compile": "node compile.mjs",
+    "proxy": "node aidedd-proxy.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.4"
+  }
+}

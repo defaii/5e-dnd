@@ -1,0 +1,134 @@
+{
+  "_id": "sAqTtAuDtYrpGxBR",
+  "name": "Absorption des éléments",
+  "type": "spell",
+  "folder": null,
+  "img": "systems/dnd5e/icons/svg/tradition/conjuration.svg",
+  "system": {
+    "activities": {
+      "f4lVFZ5lKnuMGayE": {
+        "_id": "f4lVFZ5lKnuMGayE",
+        "type": "attack",
+        "activation": {
+          "type": "reaction",
+          "value": null,
+          "condition": "1 réaction, que vous prenez lorsque vous subissez des dégâts d'acide, de froid, de feu, de foudre ou de tonnerre"
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": true,
+            "max": "@item.level",
+            "formula": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "Aux niveaux supérieurs. Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, les dégâts supplémentaires augmentent de 1d6 pour chaque niveau d'emplacement au-delà du niveau 1."
+        },
+        "duration": {
+          "units": "inst",
+          "value": "",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "self",
+          "value": "self",
+          "long": null,
+          "override": false
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "type": "",
+            "count": "",
+            "special": ""
+          },
+          "override": false,
+          "prompt": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "sort": 0,
+        "name": "",
+        "img": "",
+        "appliedEffects": []
+      }
+    },
+    "description": {
+      "value": "<div class=\"prose\">Le sort capte une partie de l'énergie entrante, ce qui réduit son effet sur vous et la stocke pour votre prochaine attaque au corps à corps. Vous obtenez une résistance au type de dégâts qui a déclenché le sort jusqu'au début de votre prochain tour. De plus, la première fois que vous touchez avec une attaque au corps à corps lors de votre prochain tour, la cible subit 1d6 dégâts supplémentaires du type qui a déclenché le sort, et le sort se termine.<br><strong><em>Aux niveaux supérieurs</em></strong>. Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, les dégâts supplémentaires augmentent de 1d6 pour chaque niveau d'emplacement au-delà du niveau 1.<br></div><p><em>Classes : Druide, Ensorceleur, Magicien, Rôdeur</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "Xanathar´s Guide to Everything",
+      "page": "",
+      "license": "",
+      "revision": 1,
+      "rules": "2024"
+    },
+    "activation": {
+      "type": "reaction",
+      "value": null,
+      "condition": "1 réaction, que vous prenez lorsque vous subissez des dégâts d'acide, de froid, de feu, de foudre ou de tonnerre"
+    },
+    "duration": {
+      "units": "inst",
+      "value": "",
+      "concentration": false,
+      "override": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 2,
+    "properties": [
+      "somatic"
+    ],
+    "school": "abj",
+    "level": 1,
+    "identifier": "absorption-des-elements"
+  },
+  "effects": [],
+  "flags": {
+    "5e-dnd": {
+      "importedAt": 1780102151941,
+      "aideddUrl": "https://www.aidedd.org/dnd/sorts.php?vf=absorption-des-elements",
+      "importType": "spell",
+      "sourceJsonPack": "sorts"
+    }
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "coreVersion": "14.361",
+    "createdTime": 1780102151941,
+    "modifiedTime": 1780102151941,
+    "lastModifiedBy": "1hJak6Avboq6ppFC",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "dev",
+      "uuid": null,
+      "coreVersion": "14.361",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3"
+    }
+  }
+}

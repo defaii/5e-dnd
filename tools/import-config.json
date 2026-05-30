@@ -1,0 +1,26 @@
+{
+  "_comment": "Ajoutez vos liens AideDD ici. Le pack est auto-détecté si omis.",
+  "rules": "2024",
+  "entries": [
+    {
+      "url": "https://www.aidedd.org/dnd/sorts.php?vf=esprit-guerisseur",
+      "pack": "sorts"
+    },
+    {
+      "url": "https://www.aidedd.org/dnd/sorts.php?vf=mot-de-radiance",
+      "pack": "sorts"
+    },
+    {
+      "url": "https://www.aidedd.org/monster/fr/banshie",
+      "pack": "mobs"
+    },
+    {
+      "url": "https://www.aidedd.org/regles/races/aarakocra/",
+      "pack": "race"
+    },
+    {
+      "url": "https://www.aidedd.org/regles/historiques/enfant-des-rues/",
+      "pack": "Historique"
+    }
+  ]
+}
