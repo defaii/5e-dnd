@@ -177,20 +177,33 @@ Hooks.on("getCompendiumEntryContext", (_html, options) => {
 });
 
 
+async function updateModule(manifestURL) {
+  const MODULE_ID = '5e-dnd';
+  try {
+    ui.notifications?.info(`Mise à jour en cours de ${MODULE_ID}...`);
+    // Utiliser l'API FoundryVTT pour installer/mettre à jour le module
+    await game.installPackage({ type: 'module', id: MODULE_ID, manifest: manifestURL });
+    ui.notifications?.warn(`Mise à jour de ${MODULE_ID} terminée. Veuillez recharger la page.`);
+  } catch (err) {
+    console.error(`[${MODULE_ID}] Erreur lors de la mise à jour:`, err);
+    ui.notifications?.error(`Erreur lors de la mise à jour de ${MODULE_ID}: ${err.message}`);
+  }
+}
+
 async function promptUpdate(manifestURL, remoteManifest) {
   const content = `
     <p>Une mise à jour est disponible : <strong>${remoteManifest.version}</strong></p>
     ${remoteManifest.description ? `<p>${remoteManifest.description}</p>` : ''}
-    <p><a href="${manifestURL}" target="_blank" rel="noopener">Ouvrir le manifeste</a></p>
   `;
 
   new Dialog({
     title: 'Mise à jour du module',
     content,
     buttons: {
-      open: {
-        label: 'Ouvrir le manifeste',
-        callback: () => window.open(manifestURL, '_blank')
+      update: {
+        label: 'Mettre à jour',
+        callback: () => updateModule(manifestURL),
+        icon: '<i class="fas fa-download"></i>'
       },
       ignore: {
         label: 'Ignorer',
@@ -246,27 +259,33 @@ async function checkModuleUpdate() {
   }
 }
 
-Hooks.once("ready", async () => {
-
+Hooks.once('init', () => {
   game.settings.register(MODULE_ID, 'checkmanifest', {
-            name: 'checkmanifest',
-            hint: 'URL du manifeste de vérification de mise à jour',
-            scope: 'world',
-            config: false,
-            type: String,
-            default: "https://api.github.com/repos/defaii/5e-dnd/releases/latest"
-          });
+    name: 'checkmanifest',
+    hint: 'URL du manifeste de vérification de mise à jour',
+    scope: 'world',
+    config: false,
+    type: String,
+    default: "https://api.github.com/repos/defaii/5e-dnd/releases/latest"
+  });
 
   game.settings.register(MODULE_ID, 'published_at', {
     name: 'published_at',
-    hint: 'Date de publication de la dernière version (pour debug)',
+    hint: 'Date de publication de la dernière version (pour comparaison)',
     scope: 'world',
     config: false,
     type: String,
     default: ""
   });
+});
 
-  checkModuleUpdate();
+Hooks.once("ready", async () => {
+
+  const manifestURL = game.settings.get(MODULE_ID, 'checkmanifest');
+
+  if (game.user.isGM) {
+    checkModuleUpdate();
+  }
   // -------------------------------------------------
   // 2️⃣  S’assurer que le module est bien actif.
   // -------------------------------------------------
