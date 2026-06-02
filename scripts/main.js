@@ -176,8 +176,97 @@ Hooks.on("getCompendiumEntryContext", (_html, options) => {
   });
 });
 
+
+async function promptUpdate(manifestURL, remoteManifest) {
+  const content = `
+    <p>Une mise à jour est disponible : <strong>${remoteManifest.version}</strong></p>
+    ${remoteManifest.description ? `<p>${remoteManifest.description}</p>` : ''}
+    <p><a href="${manifestURL}" target="_blank" rel="noopener">Ouvrir le manifeste</a></p>
+  `;
+
+  new Dialog({
+    title: 'Mise à jour du module',
+    content,
+    buttons: {
+      open: {
+        label: 'Ouvrir le manifeste',
+        callback: () => window.open(manifestURL, '_blank')
+      },
+      ignore: {
+        label: 'Ignorer',
+        callback: () => {}
+      }
+    }
+  }).render(true);
+}
+
+async function checkModuleUpdate() {
+  const MODULE_ID = '5e-dnd';
+  const mod = game.modules.get(MODULE_ID);
+  if (!mod) return;
+
+  const localPublishedAt = game.settings.get(MODULE_ID, 'published_at') || '';
+  console.log(`[${MODULE_ID}] Vérification de mise à jour... (local published_at: ${localPublishedAt})`);
+
+  // helper pour fetch+json avec throw
+  async function fetchJson(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  }
+
+  try {
+    // Appeler l'API GitHub pour récupérer la dernière release
+    const apiUrl = 'https://api.github.com/repos/defaii/5e-dnd/releases/latest';
+    const release = await fetchJson(apiUrl);
+    const remotePublishedAt = release.published_at || '';
+    
+    console.log(`[${MODULE_ID}] Remote published_at: ${remotePublishedAt}`);
+    
+    // Comparer les timestamps published_at
+    if (remotePublishedAt && remotePublishedAt !== localPublishedAt) {
+      // Récupérer aussi le manifeste via raw.githubusercontent
+      const tag = release.tag_name || 'main';
+      const manifestURL = `https://raw.githubusercontent.com/defaii/5e-dnd/${tag}/module.json`;
+      try {
+        const remoteManifest = await fetchJson(manifestURL);
+        console.log(`[${MODULE_ID}] Nouvelle mise à jour détectée !`);
+        ui.notifications?.info(`Mise à jour disponible pour ${MODULE_ID}`);
+        promptUpdate(manifestURL, remoteManifest);
+        // Mettre à jour le setting avec le nouveau published_at
+        await game.settings.set(MODULE_ID, 'published_at', remotePublishedAt);
+      } catch (err) {
+        console.warn(`[${MODULE_ID}] Erreur lors de la récupération du manifeste:`, err);
+      }
+    } else {
+      console.log(`[${MODULE_ID}] Aucune nouvelle mise à jour.`);
+    }
+  } catch (err) {
+    console.warn(`[${MODULE_ID}] Erreur lors de la vérification de mise à jour:`, err);
+  }
+}
+
 Hooks.once("ready", async () => {
 
+  game.settings.register(MODULE_ID, 'checkmanifest', {
+            name: 'checkmanifest',
+            hint: 'URL du manifeste de vérification de mise à jour',
+            scope: 'world',
+            config: false,
+            type: String,
+            default: "https://api.github.com/repos/defaii/5e-dnd/releases/latest"
+          });
+
+  game.settings.register(MODULE_ID, 'published_at', {
+    name: 'published_at',
+    hint: 'Date de publication de la dernière version (pour debug)',
+    scope: 'world',
+    config: false,
+    type: String,
+    default: ""
+  });
+
+  checkModuleUpdate();
   // -------------------------------------------------
   // 2️⃣  S’assurer que le module est bien actif.
   // -------------------------------------------------
