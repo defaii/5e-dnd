@@ -1,7 +1,7 @@
 {
   "id": "5e-dnd",
   "title": "5e dnd",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "compatibility": {
     "minimum": "13",
     "verified": "14",
@@ -108,6 +108,42 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
+      "flags": {}
+    },
+    {
+      "name": "macro",
+      "label": "Macro",
+      "path": "packs/macro",
+      "type": "Macro",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "tablealeatoire",
+      "label": "Table aléatoire",
+      "path": "packs/tablealeatoire",
+      "type": "RollTable",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "objet",
+      "label": "Objet",
+      "path": "packs/objet",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e",
       "flags": {}
     }
   ],

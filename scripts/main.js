@@ -177,19 +177,6 @@ Hooks.on("getCompendiumEntryContext", (_html, options) => {
 });
 
 
-async function updateModule(manifestURL) {
-  const MODULE_ID = '5e-dnd';
-  try {
-    ui.notifications?.info(`Mise à jour en cours de ${MODULE_ID}...`);
-    // Utiliser l'API FoundryVTT pour installer/mettre à jour le module
-    await game.installPackage({ type: 'module', id: MODULE_ID, manifest: manifestURL });
-    ui.notifications?.warn(`Mise à jour de ${MODULE_ID} terminée. Veuillez recharger la page.`);
-  } catch (err) {
-    console.error(`[${MODULE_ID}] Erreur lors de la mise à jour:`, err);
-    ui.notifications?.error(`Erreur lors de la mise à jour de ${MODULE_ID}: ${err.message}`);
-  }
-}
-
 async function promptUpdate(manifestURL, remoteManifest) {
   const content = `
     <p>Une mise à jour est disponible : <strong>${remoteManifest.version}</strong></p>
@@ -202,7 +189,7 @@ async function promptUpdate(manifestURL, remoteManifest) {
     buttons: {
       update: {
         label: 'Mettre à jour',
-        callback: () => updateModule(manifestURL),
+        callback: () => window.location.href = `${window.location.origin}/setup`,
         icon: '<i class="fas fa-download"></i>'
       },
       ignore: {
